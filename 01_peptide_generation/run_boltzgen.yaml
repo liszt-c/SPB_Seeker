@@ -1,0 +1,16 @@
+entities:
+  - protein: 
+      id: B # Naming of peptide chains
+      sequence: 7 # 10..22
+  - file:
+      path: PBP2B.pdb
+       
+      include: 
+        - chain:
+            id: A  # The part used for design
+
+      binding_types:
+        - chain:
+            id: A  # Which chain in the .cif file to use as target
+            binding: 107..114,137,200,202,205,206,209,211,312,314,320 # Hotspots
+          
